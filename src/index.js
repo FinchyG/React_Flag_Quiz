@@ -14,6 +14,8 @@ class Page extends React.Component {
               <div className="Wide-Div">
                 <h4>Questions</h4>
                 <div className="Narrow-Div">
+                  <p>Type in the boxes the name of the country you think the flag belongs 
+                  to, then click the Submit Answer button to check if you're right!</p>
                   <FlagQuestion src={Flags[0]} />
                   <FlagQuestion src={Flags[1]} />
                   <FlagQuestion src={Flags[2]} />

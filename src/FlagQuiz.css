@@ -23,8 +23,13 @@ body {
   width: 4.5em;
   height: 4.5em;
   position: relative;
-
+  
   animation: image_slide 4s infinite alternate;
+}
+
+@keyframes image_slide {
+  0% {left: 23%;}
+  100% {left: 70%;}
 }
 
 h1 {
@@ -100,9 +105,4 @@ button:hover {
         url('./Fonts/print_clearly-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
-}
-
-@keyframes image_slide {
-  0% {left: 23%;}
-  100% {left: 70%;}
 }

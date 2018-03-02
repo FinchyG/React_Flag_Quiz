@@ -17,6 +17,7 @@ export default class FlagQuestion extends React.Component {
         return (
         <div>
             <img src={this.props.src} />
+            <input type="text" size="15" />
         </div>
         );
     }
