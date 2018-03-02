@@ -1,0 +1,108 @@
+body {
+    font-family: print_clearlyregular;
+    font-weight: bold;
+}
+    
+.Wide-Div {
+  width: 75%;
+  margin: 3% auto;
+  background: rgb(189, 41, 164);
+  background: rgba(189, 41, 164, 0.5);
+  box-shadow: 1em 1em 1em #000000;
+  -webkit-box-shadow: 1em 1em 1em #000000;
+  -moz-box-shadow: 1em 1em 1em #000000;
+}
+
+.Narrow-Div {
+  width: 50%;
+  margin: auto;
+  padding: 1em 0;
+}
+
+.Slider {
+  width: 4.5em;
+  height: 4.5em;
+  position: relative;
+
+  animation: image_slide 4s infinite alternate;
+}
+
+h1 {
+  font-size: 5em;
+  text-shadow: .05em .05em #999999;
+  text-align: center;
+  font-family: roman_sdregular;
+}
+
+h4 {
+  font-size: 2em;
+  text-decoration: underline;
+  text-align: center;
+  margin: 1em;
+  text-shadow: .05em .05em #999999;
+  font-family: roman_sdregular;
+}
+
+p {
+  margin-bottom: 0.2em;
+}
+
+img {
+  display: block;
+  margin: 1em auto;
+  width: 5em;
+  height: 4em;
+}
+
+.FlagName {
+  visibility: hidden;
+  text-align: center;
+  font-size: 0.8em;
+}
+
+.FlagAnswerMark {
+  visibility: hidden;
+  width: 2.5em;
+  height: 2em;
+}
+
+input {
+  display: block;
+  margin: 1em auto;
+  width: 6em;
+  box-shadow: 0.2em 0.2em 0.2em #000000;
+}
+
+button {
+  font-family: print_clearlyregular;
+  font-weight: bold;
+  background: rgb(103, 146, 163);
+  background: rgba(203, 146, 163, 0.5);
+  box-shadow: 0.2em 0.2em 0.2em #000000;
+  margin: 0.2em;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+@font-face {
+  font-family: 'roman_sdregular';
+  src: url('./Fonts/roman_sd-webfont.woff2') format('woff2'),
+        url('./Fonts/roman_sd-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'print_clearlyregular';
+  src: url('./Fonts/print_clearly-webfont.woff2') format('woff2'),
+        url('./Fonts/print_clearly-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@keyframes image_slide {
+  0% {left: 23%;}
+  100% {left: 70%;}
+}
