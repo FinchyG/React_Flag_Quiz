@@ -9,8 +9,7 @@ export default class FlagQuestion extends React.Component {
     }
 
     getAnswer() {
-        const makeVisible = this.state.visibility === "visible" ? "hidden" : "visible";
-        this.setState({visibility: makeVisible});
+        this.setState({visibility: "visible"});
     }
 
     render() {
