@@ -2,29 +2,30 @@ import React from 'react';
 
 export default class FlagQuestion extends React.Component {
 
-/*    constructor(props) {
+    constructor(props) {
         super(props);
         this.state = {visibility: "hidden"};
-        this.toggleAnswer = this.toggleAnswer.bind(this);
+        this.getAnswer = this.getAnswer.bind(this);
     }
 
-    toggleAnswer() {
+    getAnswer() {
         const makeVisible = this.state.visibility === "visible" ? "hidden" : "visible";
         this.setState({visibility: makeVisible});
     }
-*/
+
     render() {
         return (
         <div>
-            <img src={this.props.src} />
+            <img src={this.props.src} alt="Flag" />
             <input type="text" size="15" />
+            <p className="FlagAnswer" style={{visibility: this.state.visibility}}>{this.props.FlagName}</p>
             <span>
               <button>Check Answer</button>
-              <button>Get Answer</button>
+              <button onClick={this.getAnswer}>Get Answer</button>
             </span>
             <span>
-              <img className="FlagAnswerMark" src={require('./Images/Correct.png')} />
-              <img className="FlagAnswerMark" src={require('./Images/Incorrect.png')} />
+              <img className="FlagAnswerMark" src={require('./Images/Correct.png')} alt="correct tick"/>
+              <img className="FlagAnswerMark" src={require('./Images/Incorrect.png')} alt="incorrect cross" />
             </span>
         </div>
         );

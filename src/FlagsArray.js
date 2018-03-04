@@ -1,5 +1,3 @@
-import React from 'react';
-
 import AustriaFlag from './Images/Austria_flag.png';
 import BelgiumFlag from './Images/Belgium_flag.png';
 import FranceFlag from './Images/France_flag.png';

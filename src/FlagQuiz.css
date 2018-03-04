@@ -59,10 +59,8 @@ img {
   height: 4em;
 }
 
-.FlagName {
-  visibility: hidden;
+.FlagAnswer {
   text-align: center;
-  font-size: 0.8em;
 }
 
 .FlagAnswerMark {
