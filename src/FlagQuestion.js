@@ -18,6 +18,14 @@ export default class FlagQuestion extends React.Component {
         <div>
             <img src={this.props.src} />
             <input type="text" size="15" />
+            <span>
+              <button>Check Answer</button>
+              <button>Get Answer</button>
+            </span>
+            <span>
+              <img className="FlagAnswerMark" src={require('./Images/Correct.png')} />
+              <img className="FlagAnswerMark" src={require('./Images/Incorrect.png')} />
+            </span>
         </div>
         );
     }

@@ -71,6 +71,12 @@ img {
   height: 2em;
 }
 
+span {
+  display: block;
+  width: 12em;
+  margin: auto;
+}
+
 input {
   display: block;
   margin: 1em auto;
