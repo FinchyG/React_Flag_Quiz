@@ -34,7 +34,7 @@ export default class FlagQuestion extends React.Component {
     render() {
         return (
         <div>
-            <img src={this.props.src} alt="Flag" />
+            <img className="Flag" src={this.props.src} alt="Flag" />
             <input type="text" size="15" ref={(input) => this.input = input} />
             <p className="FlagAnswer" style={{visibility: this.state.answer}}>{this.props.FlagName}</p>
             <span>
