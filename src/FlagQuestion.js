@@ -43,9 +43,9 @@ export default class FlagQuestion extends React.Component {
             </span>
             <span>
               <img className="FlagAnswerMark" style={{visibility: this.state.correct}} 
-               src={require('./Images/Correct.png')} alt="correct tick"/>
+               src={require('./images/Correct.png')} alt="correct tick"/>
               <img className="FlagAnswerMark" style={{visibility: this.state.incorrect}}
-               src={require('./Images/Incorrect.png')} alt="incorrect cross" />
+               src={require('./images/Incorrect.png')} alt="incorrect cross" />
             </span>
         </div>
         );
