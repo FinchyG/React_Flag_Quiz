@@ -20,4 +20,4 @@ export const FlagsArray = [
     PolandFlag,
     RomaniaFlag,
     SwedenFlag
-]
+];
