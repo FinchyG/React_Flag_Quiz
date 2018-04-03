@@ -12,11 +12,11 @@ export default class FlagQuestion extends React.Component {
                       incorrect  : false,
                       buttonLabel: "Show Answer",
                       value: ""};
-        this.hideOrShowAnswer = this.hideOrShowAnswer.bind(this);
+        this.showOrHideAnswer = this.showOrHideAnswer.bind(this);
         this.checkUserAnswer  = this.checkUserAnswer.bind(this);
     }
 
-    hideOrShowAnswer() {
+    showOrHideAnswer() {
         const makeVisible    = this.state.show        === false ? true : false;
         const setButtonLabel = this.state.buttonLabel === "Show Answer" ? "Hide Answer" : "Show Answer"; 
         this.setState({show: makeVisible});
@@ -24,11 +24,9 @@ export default class FlagQuestion extends React.Component {
     }
 
     checkUserAnswer(e) {
-        const nameOfFlag          = this.props.answer;
-        const nameOfFlagUpperCase = nameOfFlag.toUpperCase();
-        const userAnswer          = this.input.value;
-        const userAnswerFormatted = userAnswer.trim().toUpperCase();
-        if(userAnswerFormatted === nameOfFlagUpperCase){
+        const nameOfFlag          = this.props.answer.toUpperCase();
+        const userAnswer          = this.input.value.toUpperCase();
+        if(userAnswer === nameOfFlag){
             this.setState({correct: "visible"});
             this.setState({incorrect: "hidden"});
         }  else {
@@ -42,10 +40,10 @@ export default class FlagQuestion extends React.Component {
         return (
         <div>
             <FlagPicture flagImage={this.props.flagImage} alt="Flag" />
-            <button onClick={this.checkUserAnswer}>Check Answer</button>
-            <ShowOrHideButton onClick={this.hideOrShowAnswer} buttonLabel={this.state.buttonLabel} />
-            <Answer show={this.state.show} answer={this.props.answer} />
             <input type="text" size="15" ref={(input) => this.input = input} />
+            <button onClick={this.checkUserAnswer}>Check Answer</button>
+            <ShowOrHideButton onClick={this.showOrHideAnswer} buttonLabel={this.state.buttonLabel} />
+            <Answer show={this.state.show} answer={this.props.answer} />
             <span>
               <img className="FlagAnswerMark Correct" style={{visibility: this.state.correct}} 
                src={require('./images/Correct.png')} alt="correct tick"/>
