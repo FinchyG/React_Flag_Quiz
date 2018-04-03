@@ -71,8 +71,18 @@ p {
 
 span {
   display: block;
-  width: 12em;
+  width: 5em;
   margin: auto;
+}
+
+.Correct {
+  position: relative;
+  left: 0%;
+}
+
+.Incorrect {
+  position: relative;
+  left: 100%;
 }
 
 input {
@@ -85,10 +95,12 @@ input {
 button {
   font-family: print_clearlyregular;
   font-weight: bold;
+  width: 8em;
+  display: block;
+  margin: 0.2em auto;
   background: rgb(103, 146, 163);
   background: rgba(203, 146, 163, 0.5);
   box-shadow: 0.2em 0.2em 0.2em #000000;
-  margin: 0.2em;
 }
 
 button:hover {

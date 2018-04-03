@@ -1,23 +1,30 @@
 import React from 'react';
+import { FlagPicture }      from './FlagPicture';
+import { Answer }           from './Answer';
+import { ShowOrHideButton } from './ShowOrHideButton';
 
 export default class FlagQuestion extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = {answer: "hidden",
-                      correct: "hidden",
-                      incorrect: "hidden",
+        this.state = {show       : false,
+                      correct    : false,
+                      incorrect  : false,
+                      buttonLabel: "Show Answer",
                       value: ""};
-        this.getAnswer    = this.getAnswer.bind(this);
-        this.checkAnswer  = this.checkAnswer.bind(this);
+        this.hideOrShowAnswer = this.hideOrShowAnswer.bind(this);
+        this.checkUserAnswer  = this.checkUserAnswer.bind(this);
     }
 
-    getAnswer() {
-        this.setState({answer: "visible"});
+    hideOrShowAnswer() {
+        const makeVisible    = this.state.show        === false ? true : false;
+        const setButtonLabel = this.state.buttonLabel === "Show Answer" ? "Hide Answer" : "Show Answer"; 
+        this.setState({show: makeVisible});
+        this.setState({buttonLabel: setButtonLabel});
     }
 
-    checkAnswer(e) {
-        const nameOfFlag          = this.props.FlagName;
+    checkUserAnswer(e) {
+        const nameOfFlag          = this.props.answer;
         const nameOfFlagUpperCase = nameOfFlag.toUpperCase();
         const userAnswer          = this.input.value;
         const userAnswerFormatted = userAnswer.trim().toUpperCase();
@@ -34,17 +41,15 @@ export default class FlagQuestion extends React.Component {
     render() {
         return (
         <div>
-            <img className="Flag" src={this.props.src} alt="Flag" />
+            <FlagPicture flagImage={this.props.flagImage} alt="Flag" />
+            <button onClick={this.checkUserAnswer}>Check Answer</button>
+            <ShowOrHideButton onClick={this.hideOrShowAnswer} buttonLabel={this.state.buttonLabel} />
+            <Answer show={this.state.show} answer={this.props.answer} />
             <input type="text" size="15" ref={(input) => this.input = input} />
-            <p className="FlagAnswer" style={{visibility: this.state.answer}}>{this.props.FlagName}</p>
             <span>
-              <button onClick={this.checkAnswer}>Check Answer</button>
-              <button onClick={this.getAnswer}>Get Answer</button>
-            </span>
-            <span>
-              <img className="FlagAnswerMark" style={{visibility: this.state.correct}} 
+              <img className="FlagAnswerMark Correct" style={{visibility: this.state.correct}} 
                src={require('./images/Correct.png')} alt="correct tick"/>
-              <img className="FlagAnswerMark" style={{visibility: this.state.incorrect}}
+              <img className="FlagAnswerMark Incorrect" style={{visibility: this.state.incorrect}}
                src={require('./images/Incorrect.png')} alt="incorrect cross" />
             </span>
         </div>
