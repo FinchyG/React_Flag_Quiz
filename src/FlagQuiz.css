@@ -109,16 +109,16 @@ button:hover {
 
 @font-face {
   font-family: 'roman_sdregular';
-  src: url('./Fonts/roman_sd-webfont.woff2') format('woff2'),
-        url('./Fonts/roman_sd-webfont.woff') format('woff');
+  src: url('./fonts/roman_sd-webfont.woff2') format('woff2'),
+        url('./fonts/roman_sd-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'print_clearlyregular';
-  src: url('./Fonts/print_clearly-webfont.woff2') format('woff2'),
-        url('./Fonts/print_clearly-webfont.woff') format('woff');
+  src: url('./fonts/print_clearly-webfont.woff2') format('woff2'),
+        url('./fonts/print_clearly-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
