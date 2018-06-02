@@ -34,7 +34,7 @@ export default class FlagQuestion extends React.Component {
     checkUserAnswer(e) {
 
         const nameOfFlag          = this.props.answer.toUpperCase();
-        const userAnswer          = this.input.value.toUpperCase();
+        const userAnswer          = this.input.value.trim().toUpperCase();
         
         if(userAnswer === nameOfFlag){
             this.setState({correct: "visible"});

@@ -3,6 +3,7 @@ import { FlagsArray } from './FlagsArray';
 import { QuizInstructions } from './QuizInstructions';
 import TitleHeader from './TitleHeader';
 import FlagQuestion from './FlagQuestion';
+import './FlagQuiz.css';
 
 export default class FlagQuiz extends React.Component {
     
