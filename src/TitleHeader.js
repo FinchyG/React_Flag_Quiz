@@ -2,6 +2,7 @@ import React from 'react';
 import './FlagQuiz.css';
 
 export default class TitleHeader extends React.Component {
+
     render() {
         return (
         <div className="Wide-Div">
@@ -10,4 +11,5 @@ export default class TitleHeader extends React.Component {
         </div>
         );
     }
+
 }
